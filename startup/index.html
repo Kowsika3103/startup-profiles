@@ -1,83 +1,77 @@
 <!DOCTYPE html>
-<!--=== Coding by CodingLab | www.codinglabweb.com ===-->
-<html lang ="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <!----======== CSS ======== -->
-    <link rel="stylesheet"href="style.css">
-
-    <!----===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-    <title> User Details </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartupTN Ecosystem</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to left, #001f60, #002080);
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .profile-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .profile-options button {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+        .profile-options button:hover {
+            background-color: #eef;
+        }
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>Registration</header>
-        <form action ="#">
-            <div class ="form first">
-                <div class="details personal">
-                    <span class="title">Personal Details</span>
-                <div class="fields">
-                    <div class="input-field">
-                        <label> Company Name </label>
-                        <input type="text" placeholder="Enter your Company Name"required>
-                    </div>
-                    <div class="input-field">
-                        <label> Industry </label>
-                        <input type="text" placeholder="e.g., FinTech, HealthTech, etc"required>
-                    </div>
-                    <div class="input-field">
-                        <label> Location </label>
-                        <input type="text" placeholder="City,Country"required>
-                    </div>
-            <form action ="#">
-                <div class ="form second">
-                    <div class="details personal">
-                        <span class="title">Contact Information</span>
-                    <div class="input-field">
-                        <label> Contact Name </label>
-                        <input type="text" placeholder="Enter your Name"required>
-                    </div>
-                    <div class="input-field">
-                        <label> Email Address </label>
-                        <input type="text" placeholder="Enter your E-mail Address"required>
-                    </div>
-                    <div class="input-field">
-                        <label>Phone Number  </label>
-                        <input type="text" placeholder="Enter your Phone Number"required>
-                    </div>
-            <form action ="#">
-                <div class ="form third">
-                    <div class="details personal">
-                                <span class="title">Additional Information</span>
-                        <div class="input-field">
-                            <label> Website URL </label>
-                            <input type="text" placeholder="Enter your Website URL Address"optional>
-                        </div>
-                        <div class="input-field">
-                            <label> Social media link </label>
-                            <input type="text" placeholder="LinkedIn,Twitter"required>
-                        </div>
-                        <div class="input-field">
-                            <label> Team Details </label>
-                            <input type="text" placeholder="Number of employees, founders, etc."required>
-                        </div>
-                </div>
-                
-                    <button class="nextBtn">
-                        <span class="btnText">Next</span>
-                        <i class="uil uil-navigator"></i>
-                    </button>
-                    
-                </div>
-                
-                </div>
+        <!-- Logo placed outside of the content box -->
+        <img src="logo.png" alt="StartupTN Logo" class="logo">
+        <div class="content">
+            <h1>Your Complete Ecosystem</h1>
+            <p>Select your Profile Type</p>
+            <div class="profile-options">
+                <button>Startups</button>
+                <button>Aspirant (or) Individual</button>
+                <button>Mentors</button>
+                <button>Investors</button>
             </div>
-        </form>
+        </div>
     </div>
 </body>
 </html>
