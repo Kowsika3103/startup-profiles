@@ -1,25 +1,52 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StartupTN Ecosystem</title>
+    <title>Investure</title>
     <style>
-        body {
+        body, html {
             margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to left, #001f60, #002080);
-            color: #333;
         }
+        /* Container for video background */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        /* Styling for the video */
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+            object-fit: cover;
+        }
+        /* Content styles */
         .container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            position: relative;
+            z-index: 1;
         }
         .content {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -59,6 +86,15 @@
     </style>
 </head>
 <body>
+
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <div class="container">
         <!-- Logo placed outside of the content box -->
         <img src="logo.png" alt="StartupTN Logo" class="logo">
@@ -66,12 +102,19 @@
             <h1>Your Complete Ecosystem</h1>
             <p>Select your Profile Type</p>
             <div class="profile-options">
-                <button>Startups</button>
+                <button onclick="navigateToStartup()">Startups</button>
                 <button>Aspirant (or) Individual</button>
                 <button>Mentors</button>
                 <button>Investors</button>
             </div>
         </div>
     </div>
+
+    <script>
+        function navigateToStartup() {
+            window.location.href = 'startup-options.html';
+        }
+    </script>
+
 </body>
 </html>
